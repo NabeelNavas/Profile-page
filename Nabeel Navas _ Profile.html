@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NabeelNavas | Profile</title>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--tx:#14181f;--mu:#5b6573;--bd:#e2e6ec;--ac:#0f7b6c;--ac2:#e8f5f2;--hero:#0e2a3a;--herotx:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1117;--card:#161b22;--tx:#e6edf3;--mu:#8b97a6;--bd:#2b3340;--ac:#3fc5b0;--ac2:#12302c;--hero:#0a1f2b;--herotx:#fff}}
+:root[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--tx:#e6edf3;--mu:#8b97a6;--bd:#2b3340;--ac:#3fc5b0;--ac2:#12302c;--hero:#0a1f2b;--herotx:#fff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.hero{background:var(--hero);color:var(--herotx);padding:56px 20px 48px;text-align:center}
+.av{width:96px;height:96px;border-radius:50%;background:var(--ac);color:#06201b;font-size:40px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+h1{margin:0;font-size:2rem}
+.hero p{margin:8px auto 0;max-width:560px;opacity:.85}
+.btn{display:inline-block;margin-top:20px;padding:10px 20px;border-radius:999px;background:var(--ac);color:#06201b;text-decoration:none;font-weight:600}
+.stats{display:flex;justify-content:center;gap:32px;margin-top:28px;flex-wrap:wrap}
+.stats b{display:block;font-size:1.6rem}
+.stats span{font-size:.85rem;opacity:.75}
+main{max-width:1000px;margin:0 auto;padding:32px 20px 48px}
+h2{font-size:1.4rem;margin:36px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.card h3{margin:0 0 6px;font-size:1rem}
+.card .m{color:var(--mu);font-size:.85rem}
+.tag{display:inline-block;margin-top:10px;padding:2px 10px;border-radius:999px;background:var(--ac2);color:var(--ac);font-size:.78rem;font-weight:600}
+.card a{color:var(--ac);text-decoration:none;font-weight:600}
+.card a:hover{text-decoration:underline}
+footer{text-align:center;color:var(--mu);font-size:.85rem;padding:24px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="av">N</div>
+  <h1>Nabeel Navas</h1>
+  <p>Developer and AI learner building web projects and earning IBM SkillsBuild certifications in AI, generative AI and agentic AI.</p>
+  <a class="btn" href="https://github.com/NabeelNavas">GitHub: NabeelNavas</a>
+  <div class="stats">
+    <div><b>11</b><span>Certifications</span></div>
+    <div><b>5</b><span>Own projects</span></div>
+    <div><b>2</b><span>Collaborations</span></div>
+  </div>
+</header>
+<main>
+  <h2>Certifications</h2>
+  <div class="grid" id="certs"></div>
+  <h2>Projects</h2>
+  <div class="grid" id="projects"></div>
+  <h2>Collaborations</h2>
+  <div class="grid" id="collabs"></div>
+</main>
+<footer>Nabeel Navas · IBM SkillsBuild learner</footer>
+<script>
+const certs=[
+["Getting Started with Generative AI","Apr 2, 2026"],
+["Make Agentic AI Work for You","Apr 2, 2026"],
+["Retrieval-Augmented Generation for Enhanced AI Outputs","Apr 2, 2026"],
+["AI-Enabled Applications for Customer Service","Apr 16, 2026"],
+["Artificial Intelligence Fundamentals","Apr 22, 2026"],
+["Craft Precise Prompts for AI Models","Apr 22, 2026"],
+["AI Fundamentals: Foundations for Understanding AI","May 13, 2026"],
+["AI Fundamentals: Language and Vision in AI","May 13, 2026"],
+["AI Literacy","May 13, 2026"],
+["Explore Emerging Tech","May 13, 2026"],
+["Generative AI Essentials: Using LLMs to Work with Data","May 13, 2026"]];
+const projects=[
+["WEB_TECH","NabeelNavas/WEB_TECH","Web technologies coursework and practice."],
+["barber-chatbot","NabeelNavas/barber-chatbot","A chatbot for a barber shop."],
+["Personal-Portfolio","NabeelNavas/Personal-Portfolio","My personal portfolio website."],
+["Robotica_Portfolio","NabeelNavas/Robotica_Portfolio","Portfolio site for robotics work."],
+["index.html","NabeelNavas/index.html","A web page project."]];
+const collabs=[
+["projetct_applied_system","puneet6666/projetct_applied_system","Team project (owner: puneet6666)."],
+["FAI-PA1-T21","aykanayvazoglu/FAI-PA1-T21","Team project (owner: aykanayvazoglu)."]];
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+document.getElementById("certs").innerHTML=certs.map(c=>`<div class="card"><h3>${esc(c[0])}</h3><div class="m">IBM SkillsBuild · Issued ${c[1]}</div><span class="tag">Certified</span></div>`).join("");
+const pj=a=>a.map(p=>`<div class="card"><h3>${esc(p[0])}</h3><div class="m">${esc(p[2])}</div><div style="margin-top:10px"><a href="https://github.com/${p[1]}">View on GitHub →</a></div></div>`).join("");
+document.getElementById("projects").innerHTML=pj(projects);
+document.getElementById("collabs").innerHTML=pj(collabs);
+</script>
+</body>
+</html>
