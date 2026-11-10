@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nabeel Thoppil Navas – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4fb;--ink:#141a33;--muted:#5b6485;--glass:rgba(255,255,255,.7);--edge:rgba(20,26,51,.12);--a:#6d28d9;--b:#0891b2;--c:#db2777;--on:#fff;--todo:#fff1c2;--todo-ink:#7a5600;--blob:.35;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b1a;--ink:#eaf0ff;--muted:#9aa5c8;--glass:rgba(255,255,255,.06);--edge:rgba(255,255,255,.14);--a:#8b5cf6;--b:#22d3ee;--c:#f472b6;--on:#070b1a;--todo:#3a2f10;--todo-ink:#f2cf7a;--blob:.55;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#070b1a;--ink:#eaf0ff;--muted:#9aa5c8;--glass:rgba(255,255,255,.06);--edge:rgba(255,255,255,.14);--a:#8b5cf6;--b:#22d3ee;--c:#f472b6;--on:#070b1a;--todo:#3a2f10;--todo-ink:#f2cf7a;--blob:.55;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0 0 .5em;line-height:1.1}
+h1{font-size:clamp(2.4rem,8vw,5rem);font-weight:800;letter-spacing:-.03em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em}
+h3{font-size:1.1rem;font-weight:700}
+a{color:var(--b)}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+.grad{background:linear-gradient(100deg,var(--b),var(--a) 45%,var(--c),var(--b));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 8s linear infinite}
+@keyframes flow{to{background-position:250% 0}}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bg i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:var(--blob);animation:drift 22s ease-in-out infinite alternate}
+.bg i:nth-child(1){background:var(--a);top:-15vmax;left:-10vmax}
+.bg i:nth-child(2){background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-8s}
+.bg i:nth-child(3){background:var(--c);top:35%;left:45%;width:28vmax;height:28vmax;animation-delay:-14s}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.2)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding:.7rem 1rem}
+nav{max-width:1080px;margin:auto;display:flex;align-items:center;gap:.2rem;padding:.4rem .5rem .4rem 1rem;border:1px solid var(--edge);background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:999px;overflow-x:auto;scrollbar-width:none}
+.brand{font:800 1rem Sora,sans-serif;margin-right:auto;padding-right:1rem;white-space:nowrap}
+nav a.t{color:var(--muted);text-decoration:none;padding:.45rem .9rem;border-radius:999px;font-size:.92rem;font-weight:500;white-space:nowrap;transition:color .25s,background .25s}
+nav a.t:hover{color:var(--ink)}
+nav a.t[aria-current=page]{background:linear-gradient(120deg,var(--a),var(--b));color:#fff}
+#theme{border:1px solid var(--edge);background:transparent;color:var(--ink);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:1rem;flex:none;margin-left:.3rem}
+main{max-width:1080px;margin:auto;padding:2.5rem 1rem 4rem}
+section{display:none}
+section.on{display:block;animation:in .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes in{from{opacity:0;transform:translateY(24px) scale(.985);filter:blur(6px)}}
+.hero{min-height:68vh;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.pill{display:inline-flex;gap:.5rem;align-items:center;border:1px solid var(--edge);background:var(--glass);padding:.35rem .9rem;border-radius:999px;font-size:.88rem;color:var(--muted);margin-bottom:1.2rem}
+.pill b{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 #34d399;animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px transparent}}
+.role{font:600 clamp(1.1rem,2.6vw,1.6rem) Sora,sans-serif;min-height:1.6em;margin:.8rem 0}
+.role::after{content:"|";margin-left:2px;animation:blink 1s steps(1) infinite;color:var(--b)}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);font-size:1.1rem;max-width:56ch}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;margin:.3rem .5rem .3rem 0;background:linear-gradient(120deg,var(--a),var(--b));color:#fff;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 28px -10px var(--a)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px -10px var(--b)}
+.btn.alt{background:var(--glass);border:1px solid var(--edge);color:var(--ink);box-shadow:none}
+.ring{width:240px;height:240px;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,var(--b),var(--a),var(--c),var(--b));animation:spin 8s linear infinite;display:grid;place-items:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring div{width:100%;height:100%;border-radius:50%;background:var(--bg);display:grid;place-items:center;font:800 4.2rem Sora,sans-serif;animation:spin 8s linear infinite reverse}
+.stats{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
+.stat{flex:1 1 140px}
+.stat strong{display:block;font:800 2rem Sora,sans-serif}
+.stat span{color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.1rem;margin-top:1.2rem}
+.card{position:relative;background:var(--glass);border:1px solid var(--edge);border-radius:20px;padding:1.4rem;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--b) 28%,transparent),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{transform:translateY(-6px);border-color:var(--b)}
+.card:hover::before{opacity:1}
+.card p{color:var(--muted);margin:.3rem 0 1rem}
+.card small{color:var(--b);font-weight:600}
+.ic{font-size:1.8rem;margin-bottom:.5rem;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none;margin:.6rem 0 0}
+.chips li{border:1px solid var(--edge);background:var(--glass);padding:.4rem .95rem;border-radius:999px;font-size:.9rem;transition:transform .2s,border-color .2s}
+.chips li:hover{transform:translateY(-3px) scale(1.05);border-color:var(--c)}
+.tl{position:relative;padding:0 0 1.6rem 1.8rem;border-left:2px solid var(--edge)}
+.tl::before{content:"";position:absolute;left:-7px;top:.3rem;width:12px;height:12px;border-radius:50%;background:var(--b);box-shadow:0 0 14px var(--b)}
+.tl small{color:var(--muted)}
+.bar{height:8px;border-radius:99px;background:var(--edge);overflow:hidden;margin-top:.4rem}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--b),var(--a));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.lang{margin-bottom:1rem}.lang div{display:flex;justify-content:space-between;font-weight:500}
+.lang span{color:var(--muted);font-weight:400}
+.wrap{overflow-x:auto;border:1px solid var(--edge);border-radius:20px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{text-align:left;padding:.9rem 1.1rem;border-bottom:1px solid var(--edge);vertical-align:top}
+th{font:700 .9rem Sora,sans-serif;color:var(--b)}
+tbody tr{transition:background .25s}tbody tr:hover{background:color-mix(in srgb,var(--a) 14%,transparent)}
+tr:last-child td{border-bottom:0}
+.todo{background:var(--todo);color:var(--todo-ink);padding:.05rem .5rem;border-radius:6px;font-size:.82rem;font-weight:500}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.2rem 0}
+.tabs button{font:500 .95rem Inter,sans-serif;background:var(--glass);color:var(--ink);border:1px solid var(--edge);padding:.6rem 1.2rem;border-radius:999px;cursor:pointer;transition:all .25s}
+.tabs button:hover{border-color:var(--b)}
+.tabs button[aria-selected=true]{background:linear-gradient(120deg,var(--a),var(--b));color:#fff;border-color:transparent}
+.ph{border:2px dashed var(--edge);border-radius:20px;padding:2rem;text-align:center;color:var(--muted);background:var(--glass)}
+#opanel>div{animation:in .5s cubic-bezier(.2,.8,.2,1) both}
+ul.pl{padding-left:1.2rem;color:var(--muted)}
+.sub{margin:1.8rem 0 .6rem}
+.cert{cursor:pointer}.lk{display:block;color:inherit;text-decoration:none}.more{color:var(--b);font-weight:600;font-size:.9rem}
+dialog{width:min(940px,94vw);max-height:90vh;overflow:auto;background:var(--bg);color:var(--ink);border:1px solid var(--edge);border-radius:22px;padding:1.6rem;animation:in .4s cubic-bezier(.2,.8,.2,1) both}
+dialog::backdrop{background:rgba(3,6,18,.72);backdrop-filter:blur(6px)}
+.fr{width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#000;display:block}
+.x{position:sticky;top:0;float:right;border:1px solid var(--edge);background:var(--glass);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+footer{text-align:center;color:var(--muted);padding:2rem 1rem 3rem;font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center;justify-items:center;min-height:auto}.ring{width:170px;height:170px;order:-1}.ring div{font-size:3rem}.lead{margin:auto}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header><nav aria-label="Main">
+<span class="brand">NNT<span class="grad">.dev</span></span>
+<a class="t" href="#home">Home</a><a class="t" href="#about">About</a><a class="t" href="#classwork">Class activities</a><a class="t" href="#projects">Projects</a><a class="t" href="#odin">The Odin Project</a><a class="t" href="#homework">Homework</a><a class="t" href="#contact">Contact</a>
+<button id="theme" aria-label="Toggle light and dark theme">◐</button>
+</nav></header>
+<main>
+
+<section id="home">
+<div class="hero"><div>
+<span class="pill"><b></b>Open to opportunities · Riga, Latvia</span>
+<h1>Hi, I’m <span class="grad">Nabeel</span><br>Thoppil Navas</h1>
+<div class="role" id="role"></div>
+<p class="lead">Bachelor’s student at Riga Nordic University who builds small, working web apps and AI tools, while working 20 hours a week as a game presenter at Evolution.</p>
+<a class="btn" href="#projects">View my work</a><a class="btn alt" href="#contact">Say hello</a>
+</div><div class="ring"><div>NN</div></div></div>
+<div class="stats">
+<div class="stat"><strong data-n="5">0</strong><span>Live projects</span></div>
+<div class="stat"><strong data-n="12">0</strong><span>Certificates</span></div>
+<div class="stat"><strong data-n="3">0</strong><span>Languages</span></div>
+<div class="stat"><strong data-n="4">0</strong><span>Years of customer work</span></div>
+</div>
+</section>
+
+<section id="about">
+<h2>About <span class="grad">me</span></h2>
+<p class="lead">I enjoy simple pleasures like music, stay disciplined at the gym, and love travelling and trying new cuisines. Family comes first, and I value a healthy balance between work, study and personal life.</p>
+<h3 class="sub">Journey</h3>
+<div class="tl"><strong>Game Presenter, Evolution</strong><br><small>May 2022 – present · Riga</small><br>Run live games professionally and talk positively with customers, 20 hours a week.</div>
+<div class="tl"><strong>Bachelor’s degree, Riga Nordic University</strong><br><small>Feb 2022 – present · Riga · <a href="https://rnu.lv/">rnu.lv</a></small></div>
+<h3 class="sub">Skills</h3>
+<ul class="chips"><li>Generative AI and LLMs</li><li>Prompt engineering</li><li>AI API integration</li><li>JavaScript, HTML and CSS</li><li>Responsive web design</li><li>Web deployment</li><li>Git and GitHub</li><li>AWS cloud fundamentals</li><li>RAG</li><li>Agentic AI</li><li>NLP and computer vision basics</li><li>Customer communication</li><li>Teamwork</li><li>Time management</li><li>Working under pressure</li></ul>
+<h3 class="sub">Languages</h3>
+<div class="grid" id="langs"></div>
+<h3 class="sub">Certifications</h3>
+<div class="grid" id="certs"></div>
+</section>
+
+<section id="classwork">
+<h2>Class <span class="grad">activities</span></h2>
+<p class="lead">Practical tasks from my lectures. <span class="todo">Replace “add date”</span> with the real lecture dates.</p>
+<div class="wrap" style="margin-top:1.2rem"><table><thead><tr><th>Date</th><th>Task</th><th>What I did</th><th>Link</th></tr></thead><tbody id="ctable"></tbody></table></div>
+</section>
+
+<section id="projects">
+<h2>Past <span class="grad">projects</span></h2>
+<p class="lead">Every project is live on GitHub Pages. Add a PDF or PPT in each slot.</p>
+<div class="grid" id="pgrid"></div>
+</section>
+
+<section id="odin">
+<h2>The Odin <span class="grad">Project</span></h2>
+<p class="lead">A free, project-based web development curriculum. Each course has a summary, a presentation, a screen recording in my voice, and my practical work.</p>
+<div class="tabs" role="tablist" id="otabs"></div>
+<div id="opanel"></div>
+</section>
+
+<section id="homework">
+<h2><span class="grad">Homework</span></h2>
+<p class="lead">Task, answer, and a link to the code and output. <span class="todo">Replace the sample rows</span> with your real homework.</p>
+<div class="wrap" style="margin-top:1.2rem"><table><thead><tr><th>#</th><th>Topic</th><th>Task and answer</th><th>Code / output</th></tr></thead><tbody id="htable"></tbody></table></div>
+</section>
+
+<section id="contact">
+<h2>Let’s <span class="grad">talk</span></h2>
+<div class="grid">
+<div class="card"><span class="ic">✉️</span><h3>Email</h3><p><a href="mailto:nabeelnava69@gmail.com">nabeelnava69@gmail.com</a></p></div>
+<div class="card"><span class="ic">📞</span><h3>Phone</h3><p><a href="tel:+37128791890">+371 28791890</a></p></div>
+<div class="card"><span class="ic">📍</span><h3>Location</h3><p>Riga, Latvia</p></div>
+<div class="card"><span class="ic">💻</span><h3>GitHub</h3><p><a href="https://github.com/nabeelnavas">github.com/nabeelnavas</a></p></div>
+</div>
+</section>
+</main>
+<dialog id="cm" aria-label="Certificate details"><button class="x" id="cx" aria-label="Close">✕</button><div id="cmb"></div></dialog>
+<footer>© 2026 Nabeel Thoppil Navas</footer>
+
+<script>
+const $=id=>document.getElementById(id),T='<span class="todo">add</span>',BASE='https://nabeelnavas.github.io/';
+const langs=[["English","Proficient · C1–C2",92],["Hindi","Independent · A2–B2",58],["Malayalam","Mother tongue",100]];
+$('langs').innerHTML=langs.map(l=>`<div class="card lang"><div>${l[0]}<span>${l[1]}</span></div><div class="bar"><i data-w="${l[2]}"></i></div></div>`).join('');
+const VID='1exWEei0RJzUU3W_kj0327u7Tb3U7Gk-U',G=id=>'https://drive.google.com/file/d/'+id;
+const certs=[
+["AI-Enabled Applications for Customer Service","IBM SkillsBuild · 16 Apr 2026","Chatbots and automation for better customer support.","1KTVsE8zDMLCDRi69MMCFsrXRFvOQcBKY"],
+["AI Fundamentals: Foundations for Understanding AI","IBM SkillsBuild · 13 May 2026","The core ideas behind how AI works.","1kojwBVJ8uELttV6C-NHFtOwHhIQHwG3k"],
+["AI Fundamentals: Language and Vision in AI","IBM SkillsBuild · 13 May 2026","How AI understands text and images.","1G6EF6IZSOVdNuUMMZ6hgwgY1wPxNgUCh"],
+["AI Literacy","IBM SkillsBuild · 13 May 2026","Using and judging AI tools responsibly.","1uuv4CNt-1egUuOvIZTiESdv29kURsksK"],
+["Artificial Intelligence Fundamentals","IBM SkillsBuild · 22 Apr 2026","Key concepts and terms in AI.","1SjXm0flgsnsl8mY8my9YodNYHOhzBXKz"],
+["Craft Precise Prompts for AI Models","IBM SkillsBuild · 22 Apr 2026","Prompt engineering for accurate, consistent outputs.","1xETAKnJWA_3nQ0wW4vy7gsqPhRTcb_22"],
+["Explore Emerging Tech","IBM SkillsBuild · 13 May 2026","An overview of new and upcoming technologies.","1IjQPUvmkEtyP8g8MGyH0Y3DDOVm2rHsO"],
+["Generative AI Essentials: Using LLMs to Work with Data","IBM SkillsBuild · 13 May 2026","Using LLMs to explore and summarise data.","1b0jtPP6t8FGNp1oQgJxkaCiMuDWCiUb2"],
+["Getting Started with Generative AI","IBM SkillsBuild","First steps with generative AI tools.","1_WOXwrkD8c5OclrjfRnySnXho0eQH66V"],
+["Make Agentic AI Work for You","IBM SkillsBuild · 8 Apr 2026","AI agents that plan and carry out multi-step tasks.","1vJalhBjBQblivryhmjv26nRHOgkJuEeF"],
+["Retrieval-Augmented Generation for Enhanced AI Outputs","IBM SkillsBuild · 2 Apr 2026","Grounding model answers in external documents.",null],
+["AWS Cloud Practitioner Essentials","AWS","Cloud concepts, core AWS services, security, pricing and support.",null]];
+$('certs').innerHTML=certs.map((c,i)=>`<div class="card cert" tabindex="0" role="button" data-i="${i}"><small>${c[1]}</small><h3>${c[0]}</h3><p>${c[2]}</p><span class="more">${c[3]?'View slides and video':'Details'}</span></div>`).join('');
+function openCert(i){const c=certs[i];
+ $('cmb').innerHTML=`<h3>${c[0]}</h3><small style="color:var(--b)">${c[1]}</small>`+(c[3]?`<p style="color:var(--muted)">${c[2]}</p><div class="grid"><a class="card lk" href="https://docs.google.com/presentation/d/${c[3]}/edit?usp=sharing" target="_blank" rel="noopener"><span class="ic">📊</span><h3>Presentation</h3><p>The slides I made for this certificate.</p><span class="more">Open slides ↗</span></a><a class="card lk" href="${G(VID)}/view?usp=sharing" target="_blank" rel="noopener"><span class="ic">🎬</span><h3>Video</h3><p>My screen recording, explained in my own voice.</p><span class="more">Watch video ↗</span></a></div>`:`<p>${c[2]}</p><div class="ph">Presentation and video ${T}</div>`);
+ $('cm').showModal()}
+$('certs').addEventListener('click',e=>{const c=e.target.closest('.cert');if(c)openCert(+c.dataset.i)});
+$('certs').addEventListener('keydown',e=>{const c=e.target.closest('.cert');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openCert(+c.dataset.i)}});
+const closeCert=()=>{$('cm').close();$('cmb').innerHTML=''};
+$('cx').onclick=closeCert;$('cm').addEventListener('click',e=>{if(e.target===$('cm'))closeCert()});$('cm').addEventListener('cancel',()=>{$('cmb').innerHTML=''});
+const projects=[["🤖","AI chatbot for a barbershop","Gemini API assistant with a custom system prompt. The API key is entered in the browser, never hardcoded.","barber-chatbot/"],
+["⭕","Tic-tac-toe","Two-player game with JavaScript turns, win and draw detection, and a responsive CSS layout.","tic-tac-toe/"],
+["📚","Book library","Add books and mark them as to read or finished.","library/"],
+["📊","Admin dashboard","Dashboard layout demo from an HTML lecture project.","Admin-Dashboard/"],
+["📝","Sign-up form","A simple sign-up form built during my HTML lectures.","Sign-up-Form-project/"]];
+$('pgrid').innerHTML=projects.map(p=>`<div class="card"><span class="ic">${p[0]}</span><h3>${p[1]}</h3><p>${p[2]}</p><a class="btn" href="${BASE+p[3]}">Live demo</a><a class="btn alt" href="#projects">PDF / PPT ${T}</a></div>`).join('');
+const cls=[["Sign-up form","Built a form with inputs, labels and a submit button.","Sign-up-Form-project/"],["Book library","Used objects and arrays to add books and toggle read status.","library/"],["Admin dashboard","Practised layout with CSS grid and flexbox.","Admin-Dashboard/"],["Tic-tac-toe","Wrote game logic in JavaScript and styled it with CSS.","tic-tac-toe/"]];
+$('ctable').innerHTML=cls.map(c=>`<tr><td><span class="todo">add date</span></td><td>${c[0]}</td><td>${c[1]}</td><td><a href="${BASE+c[2]}">Open</a></td></tr>`).join('');
+const hw=[["HTML","Sign-up form: create inputs and labels.","Sign-up-Form-project/"],["JavaScript","Library: add and remove books.","library/"],["CSS","Dashboard layout with grid.","Admin-Dashboard/"]];
+$('htable').innerHTML=hw.map((h,i)=>`<tr><td>${i+1}</td><td>${h[0]}</td><td>${h[1]}</td><td><a href="${BASE+h[2]}">Output</a> · code ${T}</td></tr>`).join('');
+const odin=[["Intermediate HTML and CSS","Forms, advanced selectors, flexbox and grid, and more complex accessible layouts.","1JRG9klcmVwVlxEWlr4mAKS2Qvqml_y95","1ED5rcjDWCKBbkuESsBfTHEzN67PGrH12"],["Open Course","Add a few sentences about what this course covers."],["JavaScript","Functions, objects, arrays, the DOM, asynchronous code and interactive apps.","1FPnMx8DuGvaLfjmAwwSUQpZP8o3G9j8k","1JAoiPJOYDtbMcfYFchlRGzDz1-rW3W2p"],["Advanced HTML and CSS","Responsive design, animations, positioning and polished layouts.","1SG9-uTGxQw6mYgpD3To15Jnwb_DEIw6w","1w_4eXGWH3QSAQolgUm2LDQj5n90P6GwZ"]];
+function showOdin(i){[...$('otabs').children].forEach((b,j)=>b.setAttribute('aria-selected',i===j));const o=odin[i];
+$('opanel').innerHTML=`<div><div class="card"><h3>${o[0]}</h3><p>${o[1]}</p></div>
+<h3 class="sub">Presentation and video</h3><div class="grid">${o[2]?`<a class="card lk" href="https://docs.google.com/presentation/d/${o[2]}/edit?usp=sharing" target="_blank" rel="noopener"><span class="ic">📊</span><h3>Presentation</h3><p>My slides for this course.</p><span class="more">Open slides ↗</span></a>`:`<div class="ph">Add your presentation link ${T}</div>`}${o[3]?`<a class="card lk" href="https://drive.google.com/file/d/${o[3]}/view?usp=sharing" target="_blank" rel="noopener"><span class="ic">🎬</span><h3>Screen recording</h3><p>Explained in my own voice.</p><span class="more">Watch video ↗</span></a>`:`<div class="ph">Add your video link ${T}</div>`}</div>`}
+odin.forEach((o,i)=>{const b=document.createElement('button');b.textContent=o[0];b.setAttribute('role','tab');b.onclick=()=>showOdin(i);$('otabs').appendChild(b)});showOdin(0);
+
+document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.card');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}});
+$('theme').onclick=()=>{const d=document.documentElement;d.dataset.theme=d.dataset.theme==='dark'?'light':'dark'};
+
+const roles=['Web developer in training','AI app builder','Prompt engineer','Lifelong learner'];let ri=0,ci=0,del=false;
+function type(){const w=roles[ri];$('role').textContent=w.slice(0,ci);
+ if(!del&&ci===w.length){del=true;return setTimeout(type,1400)}
+ if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+ ci+=del?-1:1;setTimeout(type,del?35:70)}
+type();
+
+function count(){document.querySelectorAll('.stat strong').forEach(s=>{const n=+s.dataset.n;let i=0;const t=setInterval(()=>{s.textContent=++i;if(i>=n)clearInterval(t)},180)})}
+const views=['home','about','classwork','projects','odin','homework','contact'];let first=true;
+function route(){const h=location.hash.slice(1),v=views.includes(h)?h:'home';
+ document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===v));
+ document.querySelectorAll('nav a.t').forEach(a=>a.getAttribute('href')==='#'+v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ window.scrollTo(0,0);
+ if(v==='home')count();
+ if(v==='about')setTimeout(()=>document.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w+'%'),150)}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
